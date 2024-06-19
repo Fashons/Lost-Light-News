@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import translators as ts
 import textwrap
+
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
@@ -9,6 +10,8 @@ from tkinter import ttk
 counter = 1
 links = []
 linkk = ''
+
+root = Tk()
 
 def linki(links, counter):
     url = 'https://www.lostlight.game/news/'
@@ -25,14 +28,10 @@ def linki(links, counter):
             print(f"{counter}.{final} - {link}")
             counter = counter + 1
             links.append(link)
-    counter = str(counter)
-    # Файл
-    config = open('sittings.txt', 'w+', encoding='utf8')
-    config.write(counter)
-    config.close()
+    # print(links)
     return links
 
-def sublinki(linkk):
+def sublinki(links, linkk):
     #Файл
     file = open('lostlight.txt', 'w+', encoding='utf8')
 
@@ -78,19 +77,10 @@ def sublinki(linkk):
 
     file.close()
 
-def graphic():
-    counter = 1
-
-    # Файл
-    config = open('sittings.txt', 'r', encoding='utf8')
-    sittings = config.readline()
-    config.close()
-
-    sittings = int(sittings)
-    sittings = sittings - 1
-
-    root = Tk()
-
+def graphic(counter, links, linkk):
+    n = 0
+    files = []
+    btn = []
     #Настройки окна
     root.title('Lost Light News')
     root.geometry('1000x700')
@@ -107,37 +97,16 @@ def graphic():
     frame = Frame(root)
     frame.pack()
 
-    for i in range(sittings):
-        btn = ttk.Button(frame, text=f"Новость {counter}")
-        btn.pack(expand=True, padx=5, pady=5, ipadx=5, ipady=5, side=tk.LEFT)
+    for i in links:
+        files.append("Button" + str(counter))
         counter += 1
 
+    for i in range(len(files)):
+        # linkk = links[n]
+        btn.append(Button(frame, text=files[i], command=lambda c=i: print(btn[c].cget("text")))) # print(btn[c].cget("text"))/sublinki(links, linkk)
+        btn[i].pack(expand=True, padx=5, pady=5, ipadx=5, ipady=5, side=tk.LEFT)
+        # n += 1
     root.mainloop()
 
-def osnova():
-    # Файл
-    config = open('sittings.txt', 'r', encoding='utf8')
-    sittings = config.readline()
-    config.close()
-
-    counter = sittings
-    counter = int(counter)
-    NumStat = int(input(f"Выберите номер статьи от 1 до {counter - 1}: "))
-    if (NumStat >= 1 and NumStat <= counter):
-        try:
-            print(links[NumStat - 1])
-            linkk = links[NumStat - 1]
-            # sublinki(linkk)
-            graphic()
-        except IndexError:
-            print("Выбрана несуществующая статья!")
-            osnova()
-    else:
-        print("Выбрана несуществующая статья!")
-        osnova()
-
 linki(links, counter)
-osnova()
-
-# Разберись как сделать нажатие на кнопку в Graphic.py
-# переделай систему так чтобы graphic() стал главным!!!
+graphic(counter, links, linkk)
