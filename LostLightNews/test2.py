@@ -90,43 +90,155 @@ def sublinki(linkk):
     file.close()
 
 def but1():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[0]
     sublinki(linkk)
     window = Tk()
     window.title("Новое окно")
-    window.geometry("1200x800")
+    window.geometry("1000x700")
     window.iconbitmap(default="Lost_Light_Ico_Full.ico")
     window.resizable(False, False)
     window.attributes("-alpha", 0.9)
-    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10))
-    label.pack()
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but2():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[1]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but3():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[2]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but4():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[3]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but5():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[4]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but6():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[5]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but7():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[6]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but8():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[7]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but9():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[8]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 def but10():
+    def update_wraplength(_event):
+        label.configure(wraplength=label.winfo_width())
+
     linkk = links[9]
     sublinki(linkk)
+    window = Tk()
+    window.title("Новое окно")
+    window.geometry("1000x700")
+    window.iconbitmap(default="Lost_Light_Ico_Full.ico")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.9)
+    label = ttk.Label(window, text=TextX, font=('JetBrains Mono', 10), justify='left')
+    label.pack(side="left", fill="x", expand=True)
+    window.bind("<Configure>", update_wraplength)
 
 def graphic():
     #Настройки окна
